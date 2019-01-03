@@ -6,8 +6,8 @@ import './App.css'
 class App extends Component {
     render() {
         return (
-            <div className="App">
-                <header className="App-header">
+            <div className="body">
+                <header className="content">
                     <h1>Header</h1>
                 </header>
                 <Sidebar />

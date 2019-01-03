@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import Tooltip from './Tooltip'
 
 export default class Sidebar extends React.Component {
@@ -17,21 +17,18 @@ export default class Sidebar extends React.Component {
 
     render() {
         return (
-            <Fragment>
-                {this.state.hovering === false ?
+            <div className="sidebar"
+                 onMouseOver={this.mouseOn}
+                 onMouseOut={this.mouseOff}>
+                {this.state.hovering === true ?
                     <Tooltip
                         title={this.state.title}
                         tooltip={this.state.tooltip}
                     /> : null}
-                <div
-                    onMouseOver={this.mouseOn}
-                    onMouseOut={this.mouseOff}
-                    className="sidebar">
                     <div>
                         <p>Text</p>
                     </div>
-                </div>
-            </Fragment>
+            </div>
 
         )
     }

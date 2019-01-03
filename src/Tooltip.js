@@ -5,7 +5,8 @@ class Tooltip extends React.Component {
         return (
             <div className="tooltip">
                 <h3>{this.props.title}</h3>
-                <span className="tooltiptext">{this.props.tooltip}</span>
+                <p>Text</p>
+                <span>{this.props.tooltip}</span>
             </div>
         )
     }

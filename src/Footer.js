@@ -14,12 +14,6 @@ export default class Footer extends React.Component {
         return (
             <div className='footer'>
                 {this.state.title}
-                <div>
-                    <p>Content</p>
-                </div>
-                <div>
-                    <p>Links</p>
-                </div>
                 <Tooltip
                     title={this.state.title}
                     tooltip={this.state.tooltip}
