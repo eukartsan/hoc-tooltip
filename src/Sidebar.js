@@ -28,6 +28,18 @@ export default class Sidebar extends React.Component {
                     <div>
                         <p>Text</p>
                     </div>
+                    <div className="flex-item">
+                        <h3>{this.state.title}</h3>
+                    </div>
+                    <div className="flex-item">
+                        <p>Sidebar</p>
+                    </div>
+                    <ul className="flex-item">
+                        <li>Блог</li>
+                    </ul>
+                    <div className="flex-item">
+                        <p></p>
+                    </div>
             </div>
 
         )
