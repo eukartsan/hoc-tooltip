@@ -1,24 +1,21 @@
 import React from 'react'
 import Tooltip from './Tooltip'
+import withHover from './withHover'
 
-export default class Sidebar extends React.Component {
+class Sidebar extends React.Component {
     constructor() {
         super()
 
         this.state = {
             title: 'Sidebar',
             tooltip: 'Tooltip Sidebar',
-            hovering: false
         }
     }
-
-    mouseOn = () => this.setState({ hovering: true })
-    mouseOff = () => this.setState({ hovering: false })
 
     render() {
         return (
             <div>
-                {this.state.hovering === true ?
+                {this.props.hovering === true ?
                     <div className="tooltip-sidebar">
                         <Tooltip
                             title={this.state.title}
@@ -28,9 +25,7 @@ export default class Sidebar extends React.Component {
                         </div>
                     </div>
                     : null}
-            <div className="sidebar"
-                 onMouseOver={this.mouseOn}
-                 onMouseOut={this.mouseOff}>
+                <div className="sidebar">
                     <div>
                         <p>Text</p>
                     </div>
@@ -42,13 +37,12 @@ export default class Sidebar extends React.Component {
                         <p>Sidebar</p>
                     </div>
                     <ul className="flex-item">
-                        <li>Блог</li>
+                        <p>Блог</p>
                     </ul>
-                    <div className="flex-item">
-                        <p></p>
-                    </div>
-            </div>
+                </div>
             </div>
         )
     }
 }
+
+export default withHover(Sidebar)

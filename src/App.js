@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Sidebar from './Sidebar'
 import Footer from './Footer'
 import './App.css'
+import withHover from './withHover'
 
 class App extends Component {
     render() {
@@ -17,4 +18,4 @@ class App extends Component {
     }
 }
 
-export default App;
+export default withHover(App);
