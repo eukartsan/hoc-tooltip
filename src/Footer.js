@@ -22,10 +22,15 @@ export default class Footer extends React.Component {
                  onMouseOut={this.mouseOff}
             >
                 {this.state.hovering === true ?
-                <Tooltip
-                    title={this.state.title}
-                    tooltip={this.state.tooltip}
-                />: null}
+                    <div className="tooltip-footer">
+                        <Tooltip
+                            title={this.state.title}
+                            tooltip={this.state.tooltip}
+                        />
+                        <div className="tooltip-footer-tooltiptext">
+                        </div>
+                    </div>
+                        : null}
                 <div className="flex-item">
                     <h3>{this.state.title}</h3>
                 </div>

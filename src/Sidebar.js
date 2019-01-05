@@ -17,17 +17,24 @@ export default class Sidebar extends React.Component {
 
     render() {
         return (
+            <div>
+                {this.state.hovering === true ?
+                    <div className="tooltip-sidebar">
+                        <Tooltip
+                            title={this.state.title}
+                            tooltip={this.state.tooltip}
+                        />
+                        <div className="tooltip-sidebar-tooltiptext">
+                        </div>
+                    </div>
+                    : null}
             <div className="sidebar"
                  onMouseOver={this.mouseOn}
                  onMouseOut={this.mouseOff}>
-                {this.state.hovering === true ?
-                    <Tooltip
-                        title={this.state.title}
-                        tooltip={this.state.tooltip}
-                    /> : null}
                     <div>
                         <p>Text</p>
                     </div>
+
                     <div className="flex-item">
                         <h3>{this.state.title}</h3>
                     </div>
@@ -41,7 +48,7 @@ export default class Sidebar extends React.Component {
                         <p></p>
                     </div>
             </div>
-
+            </div>
         )
     }
 }
