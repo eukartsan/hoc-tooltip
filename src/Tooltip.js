@@ -3,9 +3,11 @@ import React from 'react'
 class Tooltip extends React.Component {
     render() {
         return (
-            <div>
-                <h3>{this.props.title}</h3>
-                <span>{this.props.tooltip}</span>
+            <div className={this.props.direction}>
+                <div>
+                    <h3>{this.props.tooltipTitle}</h3>
+                    <span>{this.props.tooltip}</span>
+                </div>
             </div>
         )
     }

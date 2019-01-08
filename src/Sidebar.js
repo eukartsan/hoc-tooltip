@@ -3,14 +3,6 @@ import Tooltip from './Tooltip'
 import withHover from './withHover'
 
 class Sidebar extends React.Component {
-    constructor() {
-        super()
-
-        this.state = {
-            title: 'Sidebar',
-            tooltip: 'Tooltip Sidebar',
-        }
-    }
 
     render() {
         return (
@@ -18,11 +10,10 @@ class Sidebar extends React.Component {
                 {this.props.hovering === true ?
                     <div className="tooltip-sidebar">
                         <Tooltip
-                            title={this.state.title}
-                            tooltip={this.state.tooltip}
+                            tooltipTitle={'Sidebar Title'}
+                            tooltip={'Tooltip Sidebar'}
+                            direction={'left'}
                         />
-                        <div className="tooltip-sidebar-tooltiptext">
-                        </div>
                     </div>
                     : null}
                 <div className="sidebar">
@@ -31,7 +22,7 @@ class Sidebar extends React.Component {
                     </div>
 
                     <div className="flex-item">
-                        <h3>{this.state.title}</h3>
+
                     </div>
                     <div className="flex-item">
                         <p>Sidebar</p>

@@ -3,30 +3,21 @@ import Tooltip from './Tooltip'
 import withHover from './withHover'
 
 class Footer extends React.Component {
-    constructor() {
-        super()
-
-        this.state = {
-            title: 'Footer',
-            tooltip: 'Tooltip Footer',
-        }
-    }
 
     render() {
         return (
             <div className="flex-container flex-end">
-                {this.props.hovering === true ?
+                {this.props.hovering === false ?
                     <div className="tooltip-footer">
                         <Tooltip
-                            title={this.state.title}
-                            tooltip={this.state.tooltip}
+                            tooltipTitle={'Footer Title'}
+                            tooltip={'Tooltip Footer'}
+                            direction={'top'}
                         />
-                        <div className="tooltip-footer-tooltiptext">
-                        </div>
                     </div>
                     : null}
                 <div className="flex-item">
-                    <h3>{this.state.title}</h3>
+
                 </div>
                 <div className="flex-item">
                     <p>Footer</p>
