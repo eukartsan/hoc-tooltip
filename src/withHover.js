@@ -17,6 +17,7 @@ function withHover(Component) {
                         hovering={this.state.hovering}
                     />
                 </div>
+
             )
         }
     }
