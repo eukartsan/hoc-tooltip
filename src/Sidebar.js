@@ -2,16 +2,19 @@ import React from 'react'
 import Tooltip from './Tooltip'
 import withHover from './withHover'
 
-const Sidebar = (props) => {
+const Sidebar = ({hovering}) => {
     return (
         <div>
-            {props.hovering === true ?
+            {hovering === true ?
                 <Tooltip
                     tooltipTitle={'Sidebar Title'}
                     tooltip={'Tooltip Sidebar'}
                     direction={'left'}
                 />
-                : null}
+                :
+                <Tooltip
+                />
+            }
             <div className="sidebar">
                 <div>
                     <p>Text</p>

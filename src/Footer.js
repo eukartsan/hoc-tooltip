@@ -2,16 +2,19 @@ import React from 'react'
 import Tooltip from './Tooltip'
 import withHover from './withHover'
 
-const Footer = (props) => {
+const Footer = ({hovering}) => {
     return (
         <div className="flex-footer">
-            {props.hovering === true ?
+            {hovering === true ?
                 <Tooltip
                     tooltipTitle={'Footer Title'}
                     tooltip={'Tooltip Footer'}
                     direction={'top'}
                 />
-                : null}
+                :
+                <Tooltip
+
+                />}
             <div className="flex-container flex-end">
                 <div className="flex-item">
                     <p>Footer</p>
